@@ -1,0 +1,105 @@
+/*
+**
+** FONTS
+**
+*/
+@font-face {
+    font-family: Roboto;
+    src: url(Roboto-Regular.ttf);
+}
+
+/*
+**
+** RAIZ DO DOCUMENTO
+**
+*/
+:root {
+    --span-height: 100px;
+    --span-width : 70px;
+}
+
+/*
+**
+** RESET
+**
+*/
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+
+    color: rgb(48, 48, 48);
+    font-family: Roboto;
+    height: 100vh;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+/*
+**
+** COUNTDOWN
+**
+*/
+.countdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    max-width: 750px;
+    width: 100%;
+}
+
+.countdown .title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.countdown .content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.content .separator {
+    position: relative;
+    top: calc(
+        var(--span-height) / 2
+    );
+
+    font-size: 3rem;
+    transform: translateY(-50%);
+}
+
+.content .item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.content .item .numbers {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.content .item .numbers span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(245, 246, 248);
+    border: 1px solid rgba(209, 209, 209, 0.75);
+    border-radius: 0.25rem;
+    box-shadow: 0 3px 0 rgba(209, 209, 209, 0.75);
+    font-size: 3.5rem;
+    height: var(--span-height);
+    width: var(--span-width);
+}
